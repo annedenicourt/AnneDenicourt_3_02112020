@@ -5,12 +5,12 @@
 		<link rel="stylesheet" href="CSS/style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Oh my food</title>
+		<title>Oh my food Accueil</title>
 	</head>
 	<body>
 		<!-- EN-TETE PAGE  -->
 		<header>
-			<nav>
+			<nav class="accueil">
 				<i class="fas fa-arrow-left fa-2x"></i>
 				<img src="images/logo/ohmyfood.svg" alt="logo ohmyfood" id="logo"/>
 			</nav>
@@ -18,154 +18,189 @@
 		<!-- CONTENU PAGE -->
 		<main>
 			<div id="geolocalisation">
-						<i class="fas fa-map-marker-alt"></i>
-						<p><strong>Paris, Belleville</strong></p>
-					</div>
+				<i class="fas fa-map-marker-alt"></i>
+				<p>
+					<strong>Paris, Belleville</strong>
+				</p>
+			</div>
 			<section class="introduction_page">
-					
-					<div id="titre_page">
+				<div id="titre_page">
 					<h1>Réservez le menu qui<br>vous convient</br></h1>
-				<p>Découvrez des restaurants d'exception,<br> sélectionnés par nos soins.</br></p>
+					<p>
+						Découvrez des restaurants d'exception,
+						<br>
+						 sélectionnés par nos soins.
+						</br>
+					</p>
 				</div>
-
 				<a href="#" class="button">
-					<div class="button__name"><strong>Explorer nos restaurants</strong></div>
-				</div></a>
-			</section>
-			<!-- fonctionnement -->
-			<section id="fonctionnement">
-				<h2>Fonctionnement</h2>
-
-				<div id="all_step">
-					<div class="step">
-					<div class="step__number"><strong>1</strong></div>
-					<div class="step__bg">
-								<i class="fas fa-mobile-alt"></i>
-								<div class="step__title">
-									<h3>Choisissez un restaurant</h3>
-								</div>
-							</div>
-						</div>
-
+					<div class="button__name">
+						<strong>Explorer nos restaurants</strong>
+					</div>
+				</div>
+			</a>
+		</section>
+		<!-- fonctionnement -->
+		<section id="fonctionnement">
+			<h2>Fonctionnement</h2>
+			<div id="all_step">
 				<div class="step">
-					<div class="step__number"><strong>2</strong></div>
+					<div class="step__number">
+						<strong>1</strong>
+					</div>
 					<div class="step__bg">
-								<i class="fas fa-list-ul"></i>
-								<div class="step__title">
-									<h3>Composez votre menu</h3>
-								</div>
-							</div>
+						<i class="fas fa-mobile-alt"></i>
+						<div class="step__title">
+							<h3>Choisissez un restaurant</h3>
 						</div>
-
+					</div>
+				</div>
 				<div class="step">
-					<div class="step__number"><strong>3</strong></div>
+					<div class="step__number">
+						<strong>2</strong>
+					</div>
+					<div class="step__bg">
+						<i class="fas fa-list-ul"></i>
+						<div class="step__title">
+							<h3>Composez votre menu</h3>
+						</div>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__number">
+						<strong>3</strong>
+					</div>
 					<div class="step__bg_2">
-								<i class="fas fa-store"></i>
-								<div class="step__title">
-									<h3>Dégustez au restaurant</h3>
-								</div>
-							</div>
+						<i class="fas fa-store"></i>
+						<div class="step__title">
+							<h3>Dégustez au restaurant</h3>
 						</div>
 					</div>
-					
-			</section>
-			
-			<!-- Restaurants -->
-				<section id="restaurant">
-					<div id="title_restaurant">
-						<h2>Restaurants</h2>
+				</div>
+			</div>
+		</section>
+		<!-- Restaurants -->
+		<section id="restaurant">
+			<div id="title_restaurant">
+				<h2>Restaurants</h2>
+			</div>
+			<div id="all_vignette_rest">
+				<a href="menu1.html">
+					<div class="fond_vignette_rest">
+						<div class="new">
+							<div class="new__sticker">
+								<strong>Nouveau</strong>
+							</div>
+						</div>
+						<img class="rest_pict" src="images/restaurants/palette_gout.jpg" alt=photo_palette_gout/>
+						<div class="description_vignette_rest">
+							<div class="titre_vignette_rest">
+								<h2>La palette du goût</h2>
+								<p>
+									Ménilmontant
+								</p>
+							</div>
+							<a href="#" class="favorite">
+								<div class="heart">
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								<div class="favorite__bg">
+									<i class="fas fa-heart fa-2x"></i>
+								</div>
+							</a>
+						</div>
 					</div>
-					
-						<div id="all_vignette_rest">
-
-							<a href="#">
-							<div class="fond_vignette_rest">
-								<div class="new">
-									<div class="new__sticker"><strong>Nouveau</strong></div>
-								</div>
-								<img class="rest_pict" src="images/restaurants/palette_gout.jpg" alt=photo_palette_gout/>
-								<div class="description_vignette_rest">
-									<div class="titre_vignette_rest">
-									<h2>La palette du goût</h2>
-									<p>Ménilmontant</p>
-									</div>
-								<a href="#" class="favorite">
-									<div class="heart"><i class="far fa-heart fa-2x"></i></div>
-									<div class="favorite__bg"><i class="fas fa-heart fa-2x"></i></div>
-								</a>
-
-								</div>
+				</a>
+				<a href="menu2.html">
+					<div class="fond_vignette_rest">
+						<div class="new">
+							<div class="new__sticker">
+								<strong>Nouveau</strong>
 							</div>
-						</a>
-
-
-						<a href="#">
-							<div class="fond_vignette_rest">
-								<div class="new">
-									<div class="new__sticker"><strong>Nouveau</strong></div>
-								</div>
-								<img class="rest_pict" src="images/restaurants/note_enchantee.jpg" alt=photo_note_enchantee/>
-								<div class="description_vignette_rest">
-									<div class="titre_vignette_rest">
-									<h2>La note enchantée</h2>
-									<p>Charonne</p>
-									</div>
-								<a href="#" class="favorite">
-									<div class="heart"><i class="far fa-heart fa-2x"></i></div>
-									<div class="favorite__bg"><i class="fas fa-heart fa-2x"></i></div>
-								</a>
-								</div>
+						</div>
+						<img class="rest_pict" src="images/restaurants/note_enchantee.jpg" alt=photo_note_enchantee/>
+						<div class="description_vignette_rest">
+							<div class="titre_vignette_rest">
+								<h2>La note enchantée</h2>
+								<p>
+									Charonne
+								</p>
 							</div>
-						</a>
-
-						<a href="#">
-							<div class="fond_vignette_rest">
-								<img class="rest_pict" src="images/restaurants/a_la_francaise.jpg" alt=photo_a_la_francaise/>
-								<div class="description_vignette_rest">
-									<div class="titre_vignette_rest">
-									<h2>À la française</h2>
-									<p>Cité Rouge</p>
-									</div>
-								<a href="#" class="favorite">
-									<div class="heart"><i class="far fa-heart fa-2x"></i></div>
-									<div class="favorite__bg"><i class="fas fa-heart fa-2x"></i></div>
-								</a>
+							<a href="#" class="favorite">
+								<div class="heart">
+									<i class="far fa-heart fa-2x"></i>
 								</div>
-							</div>
-						</a>
-
-						<a href="#">
-							<div class="fond_vignette_rest">
-								<img class="rest_pict" src="images/restaurants/delice_sens.jpg" alt=photo_delice_sens/>
-								<div class="description_vignette_rest">
-									<div class="titre_vignette_rest">
-									<h2>Le délice des sens</h2>
-									<p>Folie-Méricourt</p>
-									</div>
-								<a href="#" class="favorite">
-									<div class="heart"><i class="far fa-heart fa-2x"></i></div>
-									<div class="favorite__bg"><i class="fas fa-heart fa-2x"></i></div>
-								</a>
+								<div class="favorite__bg">
+									<i class="fas fa-heart fa-2x"></i>
 								</div>
-							</div>
-						</a>
-
+							</a>
+						</div>
 					</div>
-
-				</section>
-					
-		</main>
-		<!-- PIED PAGE -->
-		<footer>
-
-			<h2>ohmyfood</h2>
-			
-					<p><a href="#"><strong><i class="fas fa-utensils"></i>Proposer un restaurant</strong></a></p>
-					<p><a href="#"><strong><i class="fas fa-hands-helping"></i>Devenir partenaire</strong></a></p>
-					<p><a href="#"><strong>Mentions légales</strong></a></p>
-					<p><a href="mailto:xxx@yz.com"><strong>Contact</strong></a></p>
-				
-			
-		</footer>
-	</body>
+				</a>
+				<a href="menu3.html">
+					<div class="fond_vignette_rest">
+						<img class="rest_pict" src="images/restaurants/a_la_francaise.jpg" alt=photo_a_la_francaise/>
+						<div class="description_vignette_rest">
+							<div class="titre_vignette_rest">
+								<h2>À la française</h2>
+								<p>
+									Cité Rouge
+								</p>
+							</div>
+							<a href="#" class="favorite">
+								<div class="heart">
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								<div class="favorite__bg">
+									<i class="fas fa-heart fa-2x"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</a>
+				<a href="menu4.html">
+					<div class="fond_vignette_rest">
+						<img class="rest_pict" src="images/restaurants/delice_sens.jpg" alt=photo_delice_sens/>
+						<div class="description_vignette_rest">
+							<div class="titre_vignette_rest">
+								<h2>Le délice des sens</h2>
+								<p>
+									Folie-Méricourt
+								</p>
+							</div>
+							<a href="#" class="favorite">
+								<div class="heart">
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								<div class="favorite__bg">
+									<i class="fas fa-heart fa-2x"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+	</main>
+	<!-- PIED PAGE -->
+	<footer>
+		<h2>ohmyfood</h2>
+		<p>
+			<a href="#">
+				<strong><i class="fas fa-utensils"></i>Proposer un restaurant</strong>
+			</a>
+		</p>
+		<p>
+			<a href="#">
+				<strong><i class="fas fa-hands-helping"></i>Devenir partenaire</strong>
+			</a>
+		</p>
+		<p>
+			<a href="#"><strong>Mentions légales</strong></a>
+		</p>
+		<p>
+			<a href="mailto:xxx@yz.com"><strong>Contact</strong></a>
+		</p>
+	</footer>
+</body>
 </html>
