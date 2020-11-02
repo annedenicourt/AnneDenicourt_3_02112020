@@ -1,0 +1,328 @@
+
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../font/roboto-thin-webfont.eot');
+    src: url('../font/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-thin-webfont.woff2') format('woff2'),
+         url('../font/roboto-thin-webfont.woff') format('woff'),
+         url('../font/roboto-thin-webfont.ttf') format('truetype'),
+         url('../font/roboto-thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../font/roboto-medium-webfont.eot');
+    src: url('../font/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-medium-webfont.woff2') format('woff2'),
+         url('../font/roboto-medium-webfont.woff') format('woff'),
+         url('../font/roboto-medium-webfont.ttf') format('truetype'),
+         url('../font/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../font/shrikhand-regular-webfont.eot');
+    src: url('../font/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../font/shrikhand-regular-webfont.woff') format('woff'),
+         url('../font/shrikhand-regular-webfont.ttf') format('truetype'),
+         url('../font/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-footer: #3f3f3f;
+$color-bg: #f7f7f7;
+
+@keyframes fillheart {
+	color: $color-primary;
+}
+
+body {
+	margin: 0;
+	font-family: roboto;
+}
+
+footer h2 {
+	font-family: shrikhandregular;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.fa-arrow-left {
+	position: absolute;
+	left: 25px;
+}
+
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+		& .fa-arrow-left {
+			display: none;
+	}
+}
+
+#geolocalisation {
+	background-color: #ececec;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.fa-map-marker-alt {
+	margin-right: 20px;
+}
+
+/* Introduction */
+
+.introduction_page {
+	background-color: $color-bg;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 50px 50px 30px;
+}
+
+#titre_page {
+	text-align: center;
+}
+
+#titre_page h1 {
+	font-size: 1.8em;
+}
+
+#titre_page p {
+	font-size: 1.3em;
+	margin-bottom: 40px;
+}
+
+
+.button {
+	background: $color-primary; /* Old browsers */
+	background: -moz-linear-gradient(to top left, $color-secondary, $color-primary); /* FF3.6-15 */
+	background: -webkit-linear-gradient(to top left, $color-secondary, $color-primary); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, $color-secondary, $color-primary); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-radius: 30px;
+	box-shadow: 3px 3px 5px grey;
+	height: 50px;
+	display: flex;
+	align-items: center;
+		&__name {
+			color: #fff;
+			padding: 0 20px;
+		}
+		&:hover {
+			filter: brightness(1.1);
+			box-shadow: 5px 5px 5px grey;
+		}
+}
+
+#fonctionnement h2 {
+	font-size: 1.8em;
+	padding-left: 37px;
+}
+
+#all_step {
+	display: flex;
+	flex-direction: column;
+}
+
+.step {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 96%;
+	margin-bottom: 30px;
+		
+		&__number {
+			background-color: $color-primary;
+			border-radius: 15px;
+			height: 30px;
+			width: 30px;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			left: 15px;
+			
+		}
+		&__bg {
+			background-color: $color-bg;
+			display: flex;
+			align-items: center;
+			width: 85%;
+			height: 80px;
+			border-radius: 20px;
+			box-shadow: 5px 5px 5px #ececec;
+				& .fa-mobile-alt {
+					font-size: 1.5em;
+					opacity: 0.8;
+					margin-left: 50px;
+					margin-right: 9px;
+				}
+				& .fa-list-ul {
+					font-size: 1.5em;
+					opacity: 0.8;
+					margin-left: 50px;
+				}
+				& .step__title {
+					padding-left: 30px;
+				}
+		}
+		&__bg_2 {
+			background-color: lighten($color-primary, 35%);
+			display: flex;
+			align-items: center;
+			width: 85%;
+			height: 80px;
+			border-radius: 20px;
+			box-shadow: 5px 5px 5px #ececec;
+
+				& .fa-store {
+					font-size: 1.5em;
+					color: $color-primary;
+					opacity: 0.8;
+					margin-left: 50px;
+					margin-right: -5px;
+				}
+				& .step__title {
+					padding-left: 30px;
+				}
+		}
+
+}
+
+
+/* Section restaurants */
+
+#restaurant {
+	background-color: $color-bg;
+	padding-bottom: 70px;
+}
+
+#title_restaurant h2 {
+	font-size: 1.8em;
+	padding-left: 37px;
+	padding-top: 40px;
+}
+
+#all_vignette_rest {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fond_vignette_rest {
+	background-color: #fff;
+	width: 85%;
+	height: 300px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto;
+	box-shadow: 5px 5px 5px #ececec;
+	position:relative;
+}
+
+.rest_pict {
+	width: 100%;
+	height: 210px;
+	border-radius: 20px 20px 0 0;
+	object-fit: cover;
+}
+
+.description_vignette_rest {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 15px;
+}
+
+.titre_vignette_rest {
+	& p {
+		font-size: 1.3em;
+		margin-top: -15px;
+	}
+	& h2 {
+		margin-top: 10px;
+	}
+}
+
+.new {
+	background-color: red;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 15px;
+
+	&__sticker {
+		background-color: $color-tertiary;
+		color: darken($color-tertiary, 30%);
+		border-radius: 3px;
+		height: 35px;
+		width: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position:absolute;
+		top:15px;
+	}
+}
+
+.favorite {
+	padding-top: 20px;
+	position: relative;
+	& .heart {
+		color: $color-footer;
+	}
+	
+	&:hover {
+		& .favorite__bg {
+			opacity: 1;
+		}
+		& .heart{
+			opacity: 0;
+			transition: opacity 1200ms;
+		}
+	}
+	&__bg {
+		color: $color-primary;
+		position: absolute;
+		top: 20px;
+		opacity: 0;
+		transition: opacity 1200ms;
+	}
+}
+
+
+/* Footer */
+
+footer {
+	background-color: $color-footer;
+	color: #fff;
+	padding: 25px 0px 25px 40px;
+		& .fa-utensils {
+			margin-right: 16px;
+		}
+		& .fa-hands-helping {
+			margin-right: 10px;
+		}
+		& a {
+			color: #fff;
+		}
+}
+
