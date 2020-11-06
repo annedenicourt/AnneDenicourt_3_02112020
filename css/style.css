@@ -314,22 +314,24 @@ nav {
   top: 15px;
   right: 15px; }
 
+@keyframes fondu_heart {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .favorite {
   padding-top: 20px;
   position: relative; }
   .favorite .heart {
     color: #3f3f3f; }
   .favorite:hover .favorite__bg {
-    opacity: 1; }
-  .favorite:hover .heart {
-    opacity: 0;
-    transition: opacity 1200ms; }
+    animation: fondu_heart 1600ms;
+    animation-fill-mode: forwards; }
   .favorite__bg {
     color: #9356DC;
     position: absolute;
     top: 20px;
-    opacity: 0;
-    transition: opacity 1200ms; }
+    opacity: 0; }
 
 /* Footer */
 footer {
@@ -344,6 +346,11 @@ footer {
     color: #fff; }
 
 /* page menu */
+@keyframes fondu {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .menu_pict {
   width: 100%;
   height: 500px;
@@ -388,16 +395,62 @@ footer {
     border-radius: 10px;
     box-shadow: 5px 5px 5px #ececec;
     width: 85%;
+    height: 70px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end; }
+    align-items: center;
+    animation: fondu 6s 200ms;
+    animation-fill-mode: backwards;
+    position: relative; }
+    .sous_menu__item:hover .select {
+      transform: scaleX(1);
+      opacity: 1; }
+    .sous_menu__item:hover .sous_menu--description {
+      width: 85%; }
+    .sous_menu__item:hover .fa-check-circle {
+      transform: rotate(360deg);
+      transition: transform 800ms; }
   .sous_menu__item p, .sous_menu h3 {
     margin-top: 0px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    font-size: 1.2em; }
   .sous_menu--price {
-    padding-right: 15px; }
+    display: flex;
+    align-items: flex-end; }
+
+.sous_menu--description {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform-origin: left 90%;
+  transition: width 1300ms; }
+
+.title_item {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.select {
+  background-color: #99E2D0;
+  width: 60px;
+  height: 70px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: right 50%;
+  transition: transform 1300ms;
+  position: absolute;
+  right: 0px; }
+  .select .fa-check-circle {
+    color: #fff;
+    transform: rotate(-90deg); }
 
 .command {
   display: flex;
