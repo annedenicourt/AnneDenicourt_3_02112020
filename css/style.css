@@ -19,7 +19,10 @@
 /* general */
 body {
   margin: 0;
-  font-family: roboto, sans-serif; }
+  font-family: roboto, sans-serif;
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto; }
 
 footer h2 {
   font-family: shrikhandregular, sans-serif; }
@@ -81,7 +84,7 @@ nav {
   width: 100%;
   height: 100%;
   z-index: -1;
-  animation: spinner_bg 4s; }
+  animation: spinner_bg 3s; }
 
 .spinner {
   position: fixed;
@@ -168,7 +171,15 @@ nav {
   text-align: center; }
 
 #titre_page h1 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  padding-right: 40px;
+  padding-left: 40px; }
+  @media screen and (min-width: 768px) {
+    #titre_page h1 {
+      font-size: 2.5em;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-bottom: 0px; } }
 
 #titre_page p {
   font-size: 1.3em;
@@ -199,10 +210,21 @@ nav {
 #fonctionnement h2 {
   font-size: 1.8em;
   padding-left: 37px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #fonctionnement h2 {
+      padding-left: 55px; } }
+  @media screen and (min-width: 992px) {
+    #fonctionnement h2 {
+      padding-left: 26px; } }
 
 #all_step {
   display: flex;
   flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    #all_step {
+      flex-direction: row;
+      margin-right: 20px;
+      margin-top: 35px; } }
 
 .step {
   display: flex;
@@ -229,17 +251,35 @@ nav {
     height: 80px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #ececec; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .step__bg {
+        flex-grow: 1; } }
     .step__bg .fa-mobile-alt {
       font-size: 1.5em;
       opacity: 0.8;
       margin-left: 50px;
       margin-right: 9px; }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .step__bg .fa-mobile-alt {
+          margin-left: 25px;
+          margin-right: 0px; } }
     .step__bg .fa-list-ul {
       font-size: 1.5em;
       opacity: 0.8;
       margin-left: 50px; }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .step__bg .fa-list-ul {
+          margin-left: 25px;
+          margin-right: 0px; } }
     .step__bg .step__title {
-      padding-left: 30px; }
+      padding-left: 30px;
+      padding-right: 5px; }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .step__bg .step__title {
+          padding-left: 10px; } }
+      @media screen and (min-width: 768px) {
+        .step__bg .step__title {
+          padding-left: 20px; } }
   .step__bg_2 {
     background-color: #f2eafb;
     display: flex;
@@ -248,16 +288,27 @@ nav {
     height: 80px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #ececec; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .step__bg_2 {
+        flex-grow: 1; } }
     .step__bg_2 .fa-store {
       font-size: 1.5em;
       color: #9356DC;
       opacity: 0.8;
       margin-left: 50px;
       margin-right: -5px; }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .step__bg_2 .fa-store {
+          margin-left: 25px;
+          margin-right: 0px; } }
     .step__bg_2 .step__title {
-      padding-left: 30px; }
+      padding-left: 30px;
+      padding-right: 5px; }
+      @media screen and (min-width: 768px) {
+        .step__bg_2 .step__title {
+          padding-left: 20px; } }
 
-/* Section restaurants */
+/* restaurants */
 #restaurant {
   background-color: #f7f7f7;
   padding-bottom: 70px; }
@@ -266,11 +317,21 @@ nav {
   font-size: 1.8em;
   padding-left: 37px;
   padding-top: 40px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #title_restaurant h2 {
+      padding-left: 55px; } }
+  @media screen and (min-width: 992px) {
+    #title_restaurant h2 {
+      padding-left: 26px; } }
 
 #all_vignette_rest {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (min-width: 992px) {
+    #all_vignette_rest {
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .fond_vignette_rest {
   background-color: #fff;
@@ -282,22 +343,37 @@ nav {
   margin: 20px auto;
   box-shadow: 5px 5px 5px #ececec;
   position: relative; }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .fond_vignette_rest {
+      height: 400px; } }
+  @media screen and (min-width: 992px) {
+    .fond_vignette_rest {
+      width: 45%;
+      height: 350px; } }
 
 .rest_pict {
   width: 100%;
   height: 210px;
   border-radius: 20px 20px 0 0;
   object-fit: cover; }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .rest_pict {
+      height: 310px; } }
+  @media screen and (min-width: 992px) {
+    .rest_pict {
+      height: 260px; } }
 
 .description_vignette_rest {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  height: 100%;
   padding: 0 15px; }
 
 .titre_vignette_rest p {
   font-size: 1.3em;
-  margin-top: -15px; }
+  margin-top: -15px;
+  margin-bottom: 0; }
 .titre_vignette_rest h2 {
   margin-top: 10px; }
 
@@ -344,6 +420,9 @@ footer {
     margin-right: 10px; }
   footer a {
     color: #fff; }
+  @media screen and (min-width: 768px) {
+    footer {
+      text-align: center; } }
 
 /* page menu */
 @keyframes fondu {
@@ -357,13 +436,19 @@ footer {
   object-fit: cover;
   position: relative;
   z-index: -1; }
+  @media screen and (min-width: 992px) {
+    .menu_pict {
+      height: 600px; } }
 
 .menu_background {
   background-color: #f7f7f7;
   height: auto;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
-  padding-bottom: 80px; }
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+  max-width: 650px; }
 
 .menu_title {
   display: flex;
@@ -371,11 +456,17 @@ footer {
   align-items: baseline;
   padding-left: 35px;
   padding-right: 50px; }
+  @media screen and (min-width: 768px) {
+    .menu_title {
+      padding-left: 52px; } }
   .menu_title h1 {
     font-family: shrikhandregular, sans-serif; }
 
 .sous_menu_title {
   padding-left: 38px; }
+  @media screen and (min-width: 768px) {
+    .sous_menu_title {
+      padding-left: 50px; } }
 
 .sous_menu_title::after {
   content: "";
@@ -410,7 +501,7 @@ footer {
     .sous_menu__item:hover .sous_menu--description {
       width: 85%; }
     .sous_menu__item:hover .fa-check-circle {
-      transform: rotate(360deg);
+      transform: rotate(-360deg);
       transition: transform 800ms; }
   .sous_menu__item p, .sous_menu h3 {
     margin-top: 0px;
@@ -450,7 +541,7 @@ footer {
   right: 0px; }
   .select .fa-check-circle {
     color: #fff;
-    transform: rotate(-90deg); }
+    transform: rotate(90deg); }
 
 .command {
   display: flex;

@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'roboto';
     src: url('../font/roboto-thin-webfont.eot');
@@ -49,6 +47,9 @@ $color-bg: #f7f7f7;
 body {
 	margin: 0;
 	font-family: roboto, sans-serif;
+	max-width: 1224px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 footer h2 {
@@ -132,7 +133,7 @@ nav {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	animation: spinner_bg 4s;
+	animation: spinner_bg 3s;
 }
 
 .spinner {
@@ -225,10 +226,19 @@ nav {
 
 #titre_page {
 	text-align: center;
+
 }
 
 #titre_page h1 {
 	font-size: 1.8em;
+	padding-right: 40px;
+	padding-left: 40px;
+	@media screen and (min-width: 768px) {
+		font-size: 2.5em;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-bottom: 0px;
+	}
 }
 
 #titre_page p {
@@ -261,11 +271,22 @@ nav {
 #fonctionnement h2 {
 	font-size: 1.8em;
 	padding-left: 37px;
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			padding-left: 55px;
+		}
+		@media screen and (min-width: 992px) {
+			padding-left: 26px;
+		}
 }
 
 #all_step {
 	display: flex;
 	flex-direction: column;
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+			margin-right: 20px;
+			margin-top: 35px;
+		}
 }
 
 .step {
@@ -296,19 +317,38 @@ nav {
 			height: 80px;
 			border-radius: 20px;
 			box-shadow: 5px 5px 5px #ececec;
+				@media screen and (min-width: 768px) and (max-width: 991px) {
+					flex-grow: 1;
+				}
 				& .fa-mobile-alt {
 					font-size: 1.5em;
 					opacity: 0.8;
 					margin-left: 50px;
 					margin-right: 9px;
+						@media screen and (min-width: 768px) and (max-width: 991px) {
+							margin-left: 25px;
+							margin-right: 0px;
+						}
 				}
 				& .fa-list-ul {
 					font-size: 1.5em;
 					opacity: 0.8;
 					margin-left: 50px;
+						@media screen and (min-width: 768px) and (max-width: 991px) {
+							margin-left: 25px;
+							margin-right: 0px;
+						}
+
 				}
 				& .step__title {
 					padding-left: 30px;
+					padding-right: 5px;
+					@media screen and (min-width: 768px) and (max-width: 991px) {
+						padding-left: 10px;
+						}
+					@media screen and (min-width: 768px) {
+						padding-left: 20px;
+					}
 				}
 		}
 		&__bg_2 {
@@ -319,6 +359,9 @@ nav {
 			height: 80px;
 			border-radius: 20px;
 			box-shadow: 5px 5px 5px #ececec;
+				@media screen and (min-width: 768px) and (max-width: 991px) {
+					flex-grow: 1;
+				}
 
 				& .fa-store {
 					font-size: 1.5em;
@@ -326,16 +369,24 @@ nav {
 					opacity: 0.8;
 					margin-left: 50px;
 					margin-right: -5px;
+						@media screen and (min-width: 768px) and (max-width: 991px) {
+							margin-left: 25px;
+							margin-right: 0px;
+						}
 				}
 				& .step__title {
 					padding-left: 30px;
+					padding-right: 5px;
+					@media screen and (min-width: 768px) {
+						padding-left: 20px;
+					}
 				}
 		}
 
 }
 
 
-/* Section restaurants */
+/* restaurants */
 
 #restaurant {
 	background-color: $color-bg;
@@ -346,12 +397,22 @@ nav {
 	font-size: 1.8em;
 	padding-left: 37px;
 	padding-top: 40px;
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			padding-left: 55px;
+		}
+		@media screen and (min-width: 992px) {
+			padding-left: 26px;
+		}
 }
 
 #all_vignette_rest {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+		@media screen and (min-width: 992px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 }
 
 .fond_vignette_rest {
@@ -364,6 +425,13 @@ nav {
 	margin: 20px auto;
 	box-shadow: 5px 5px 5px #ececec;
 	position:relative;
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			height: 400px;
+		}
+		@media screen and (min-width: 992px) {
+			width: 45%;
+			height: 350px;
+		}
 }
 
 .rest_pict {
@@ -371,12 +439,19 @@ nav {
 	height: 210px;
 	border-radius: 20px 20px 0 0;
 	object-fit: cover;
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			height: 310px;
+		}
+		@media screen and (min-width: 992px) {
+			height: 260px;
+		}
 }
 
 .description_vignette_rest {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	height: 100%;
 	padding: 0 15px;
 }
 
@@ -384,6 +459,7 @@ nav {
 	& p {
 		font-size: 1.3em;
 		margin-top: -15px;
+		margin-bottom: 0;
 	}
 	& h2 {
 		margin-top: 10px;
@@ -453,6 +529,10 @@ footer {
 		& a {
 			color: #fff;
 		}
+		@media screen and (min-width: 768px) {
+			text-align: center;
+
+		}
 }
 
 /* page menu */
@@ -473,6 +553,9 @@ footer {
 	object-fit: cover;
 	position: relative;
 	z-index: -1;
+		@media screen and (min-width: 992px){
+			height: 600px;
+		}
 }
 
 .menu_background {
@@ -480,7 +563,10 @@ footer {
 	height: auto;
 	border-radius: 40px 40px 0 0;
 	margin-top: -60px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 80px;
+	max-width: 650px;
 }
 
 .menu_title {
@@ -489,6 +575,9 @@ footer {
 	align-items: baseline;
 	padding-left: 35px;
 	padding-right: 50px;
+		@media screen and (min-width: 768px){
+			padding-left: 52px;
+		}
 	& h1 {
 		font-family: shrikhandregular, sans-serif;
 	}
@@ -496,6 +585,9 @@ footer {
 
 .sous_menu_title {
 	padding-left: 38px;
+		@media screen and (min-width: 768px) {
+			padding-left: 50px;
+		}
 }
 
 .sous_menu_title::after {
@@ -535,7 +627,7 @@ footer {
 					width: 85%;
 				}
 				&:hover .fa-check-circle {
-					transform: rotate(360deg);
+					transform: rotate(-360deg);
 					transition: transform 800ms;
 				}
 		}
@@ -582,7 +674,7 @@ footer {
 	right: 0px;
 		& .fa-check-circle {
 			color: #fff;
-			transform: rotate(-90deg);
+			transform: rotate(90deg);
 		}
 }
 
