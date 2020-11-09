@@ -134,13 +134,15 @@ nav {
 	height: 100%;
 	z-index: -1;
 	animation: spinner_bg 3s;
+	display: flex;
+	justify-content: center;
+	align-items:center;
 }
 
 .spinner {
-	position: fixed;
-	top: 48%;
-	left: 43%;
-	z-index: 2;
+	position: relative;
+	height: 100px;
+	width: 100px;
 }
 
 .spinner div {
