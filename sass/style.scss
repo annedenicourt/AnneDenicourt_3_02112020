@@ -62,9 +62,10 @@ a {
 }
 
 .fa-arrow-left {
-	position: absolute;
+	position: fixed;
 	left: 35px;
 	top: 20px;
+	z-index: 1;
 }
 
 nav {
@@ -503,15 +504,24 @@ nav {
 	
 	&:hover {
 		& .favorite__bg {
-			animation: fondu_heart 1600ms;
+			animation: fondu_heart 1800ms;
 			animation-fill-mode: forwards;
 		}
+		& .heart {
+			opacity: 0;
+			transition: opacity 1800ms;
+		}	
 	}
 	&__bg {
-		color: $color-primary;
 		position: absolute;
 		top: 20px;
 		opacity: 0;
+		background: $color-primary; /* Old browsers */
+		background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); /* FF3.6-15 */
+		background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, $color-primary, $color-secondary); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;	
 	}
 }
 
@@ -542,10 +552,13 @@ footer {
 @keyframes fondu {
 	0% {
 		opacity: 0;
+		transform: translateY(10px);
 	}
 	
 	100% {
 		opacity:1;
+		transform: translateY(0px);
+
 	}
 }
 
@@ -618,7 +631,7 @@ footer {
 			padding-right: 10px;
 			display: flex;
 			align-items: center;
-			animation: fondu 6s 200ms;
+			animation: fondu 3s 200ms;
 			animation-fill-mode: backwards;
 			position: relative;
 				&:hover .select {
@@ -626,7 +639,7 @@ footer {
 					opacity: 1;					
 				}
 				&:hover .sous_menu--description {
-					width: 85%;
+					width: 83%;
 				}
 				&:hover .fa-check-circle {
 					transform: rotate(-360deg);
@@ -649,7 +662,7 @@ footer {
 	justify-content: space-between;
 	width: 100%;
 	transform-origin: left 90%;
-	transition: width 1300ms;
+	transition: width 800ms;
 
 }
 .title_item {
@@ -671,7 +684,7 @@ footer {
 	opacity: 0;
 	transform: scaleX(0);
 	transform-origin: right 50%;
-	transition: transform 1300ms;
+	transition: transform 800ms;
 	position: absolute;
 	right: 0px;
 		& .fa-check-circle {
