@@ -191,10 +191,6 @@ nav {
 .button {
   background: #9356DC;
   /* Old browsers */
-  background: -moz-linear-gradient(to top left, #FF79DA, #9356DC);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(to top left, #FF79DA, #9356DC);
-  /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #FF79DA, #9356DC);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   border-radius: 30px;
@@ -401,28 +397,27 @@ nav {
 .favorite {
   padding-top: 20px;
   position: relative; }
-  .favorite .heart {
+  .favorite .heart .fa-heart {
     color: #3f3f3f; }
+  .favorite__bg {
+    position: absolute;
+    top: 20px;
+    opacity: 0; }
+  .favorite__bg .fa-heart::before {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(to bottom, #9356DC, #FF79DA);
+    /* Chrome10-25,Safari5.1-6 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   .favorite:hover .favorite__bg {
     animation: fondu_heart 1800ms;
     animation-fill-mode: forwards; }
   .favorite:hover .heart {
     opacity: 0;
     transition: opacity 1800ms; }
-  .favorite__bg {
-    position: absolute;
-    top: 20px;
-    opacity: 0;
-    background: #9356DC;
-    /* Old browsers */
-    background: -moz-linear-gradient(to bottom, #9356DC, #FF79DA);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #9356DC, #FF79DA);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
 
 /* Footer */
 footer {
