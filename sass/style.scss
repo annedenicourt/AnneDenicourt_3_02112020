@@ -656,6 +656,7 @@ footer {
 		&--price {
 			display: flex;
 			align-items: flex-end;
+			padding-bottom: 10px;
 		}
 }
 .sous_menu--description {
@@ -666,14 +667,27 @@ footer {
 	transition: width 800ms;
 
 }
+
 .title_item {
-	-webkit-line-clamp: 2;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.title_item p {
+	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
+.title_item h3 {
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .select {
 	background-color: $color-tertiary;
 	width: 60px;
