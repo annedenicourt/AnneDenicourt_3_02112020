@@ -56,6 +56,14 @@ footer h2 {
 	font-family: shrikhandregular, sans-serif;
 }
 
+footer.command {
+	background-color: $color-bg;
+}
+
+span {
+	font-weight: bold;
+}
+
 a {
 	text-decoration: none;
 	color: #000;
@@ -386,7 +394,6 @@ nav {
 
 }
 
-
 /* restaurants */
 
 #restaurant {
@@ -698,8 +705,8 @@ footer {
 	align-items: center;
 	opacity: 0;
 	transform: scaleX(0);
-	transform-origin: right 50%;
 	transition: transform 800ms;
+	transform-origin: right 50%;
 	position: absolute;
 	right: 0px;
 		& .fa-check-circle {
